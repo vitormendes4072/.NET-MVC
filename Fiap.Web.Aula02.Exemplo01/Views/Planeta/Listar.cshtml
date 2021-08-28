@@ -1,0 +1,16 @@
+﻿@model Planeta
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+
+    <h1>Planetas cadastrados: </h1>
+    @{
+    IList<Planeta> planetas = ViewBag.banco;
+        for (int i = 0; i < planetas.Count; i++)
+        {
+            <p>@planetas.ElementAt(i)</p>
+        }
+    }
+    <a asp-action="Cadastrar" class="btn btn-outline-secondary">Voltar</a>
